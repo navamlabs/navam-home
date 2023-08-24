@@ -1,6 +1,7 @@
 {
   "name": "navam-home",
   "private": true,
+  "homepage": "https://navamlabs.github.io/navam-home",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
