@@ -1,7 +1,7 @@
 {
   "name": "navam-home",
   "private": true,
-  "homepage": "https://navamlabs.github.io/navam-home",
+  "homepage": "https://navamlabs.github.io/navam-home/",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
@@ -13,6 +13,7 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "@rive-app/react-canvas": "^4.1.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
