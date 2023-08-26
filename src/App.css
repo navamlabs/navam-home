@@ -43,7 +43,10 @@ canvas#canvas {
   margin-top: 6rem;
   margin-left: 6rem;
   width: 80%;
+  display: flex;
 }
+
+
 
 .logo-name {
   font-size: 1.8rem;
@@ -66,6 +69,7 @@ canvas#canvas {
   font-size: 3.5rem;
   margin-left: 5rem;
   margin-top: -1rem;
+  color: black;
 }
 
 .logo {
@@ -140,7 +144,7 @@ canvas#logo-canvas {
   line-height: 120%;
 }
 
-.tech-item msg {
+.tech-item img {
   width: 80px;
   height: 80px;
 }
@@ -160,9 +164,12 @@ canvas#logo-canvas {
   }
 
   .logo-canvas-container {
+    width: 30%;
+    height: 300px;
     position: relative;
     top: 0rem;
   }
+
 
   .main-title {
     width: 65%;
@@ -171,7 +178,6 @@ canvas#logo-canvas {
     margin-left: 2rem;
     position: relative;
     top: 0rem;
-
   }
 
 }
@@ -180,6 +186,10 @@ canvas#logo-canvas {
   .help-section-container {
     width: 100%;
     margin: .5rem;
+  }
+
+  .logo-canvas-container {
+    height: 300px;
   }
 
   .feature-section-items-container {
@@ -238,6 +248,11 @@ canvas#logo-canvas {
     left: 6rem;
   }
 
+  .logo-canvas-container {
+    height: 150px;
+    margin-left: 2rem;
+  }
+
   .help-section-container {
     width: 100%;
     margin: .5rem;
@@ -271,7 +286,10 @@ canvas#logo-canvas {
   }
 
   .main-title {
-    width: 65%;
+    width: 90%;
+    font-weight: 800;
+    font-size: 3.5rem;
+    color: black;
     font-weight: 800;
     font-size: 2rem;
     margin-left: 2rem;
@@ -553,19 +571,27 @@ canvas#logo-title-canvas {
   width: 220px;
 }
 
-
-
-.tech-section-container {
-  display: flex;
-  flex-direction: row;
-  padding-bottom: 2rem;
-  padding-top: 2rem;
-  background-color: #D3CCE7;
-  flex-wrap: wrap;
+.tech-section {
+  display: block;
+  width: 100%;
 }
 
-.tech-item {
+.tech-section-container {
+  padding-top: 2rem;
+  background-color: #D3CCE7;
+  padding-bottom: 2rem;
+}
+
+.tech-icon {
   margin: 1rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  scale: 1.3;
+}
+
+.header-logo-title {
+  width: 100%;
+  height: 60px;
 }
 
 @media (min-width: 768px) {
@@ -625,14 +651,6 @@ canvas#logo-title-canvas {
     animation-timing-function: cubic-bezier(.05, .8, .1, .95)
   }
 
-  .tech-icon {
-    scale: .8;
-  }
-
-  .tech-icon.start-reveal {
-    animation: popup-icon 1s forwards;
-    animation-timing-function: cubic-bezier(.05, .8, .1, .95)
-  }
 
 
   .top-container {
@@ -751,6 +769,28 @@ canvas#logo-title-canvas {
 }
 
 @media only screen and (max-width: 414px) {
+  .header-logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-left: 2rem;
+    position: relative;
+  }
+
+  .tech-icon {
+    margin: 1rem;
+    padding-left: .5rem;
+    padding-right: .5rem;
+    scale: 1;
+  }
+
+  .tech-section-container {
+    padding-top: 2rem;
+    background-color: #D3CCE7;
+    padding-bottom: 2rem;
+  }
+
   .contact-section-container {
     width: 100%;
     display: flex;
@@ -822,16 +862,6 @@ canvas#logo-title-canvas {
     animation: popup 1s 0.6s forwards;
     animation-timing-function: cubic-bezier(.05, .8, .1, .95)
   }
-
-  .tech-icon {
-    scale: .8;
-  }
-
-  .tech-icon.start-reveal {
-    animation: popup-icon 1s forwards;
-    animation-timing-function: cubic-bezier(.05, .8, .1, .95)
-  }
-
 
   .top-container {
     position: fixed;
@@ -929,13 +959,13 @@ canvas#logo-title-canvas {
   @keyframes reveal-frame-left {
     0% {
       opacity: .5;
-      transform: translateX(0%) translateY(0%);
+      /* transform: scale(.5); */
       /* transform: translateX(-20%) translateY(20%); */
     }
 
     100% {
       opacity: 1;
-      transform: translateX(0%) translateY(0%);
+      /* transform: scale(1); */
     }
   }
 
@@ -956,4 +986,9 @@ canvas#logo-title-canvas {
 
 .canvas-container {
   height: 100vh;
+}
+
+.tech-marquee-container {
+  width: 1000px;
+  height: 100px;
 }
